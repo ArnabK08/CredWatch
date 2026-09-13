@@ -1,0 +1,34 @@
+{
+    "rules": [
+        {
+            "rule_id": "R001",
+            "rule_name": "Structuring / Smurfing",
+            "description": "Multiple transactions just under the reporting threshold within a short time.",
+            "parameters": {
+                "min_amount": 9000,
+                "max_amount": 9999,
+                "min_count": 3,
+                "time_window_days": 7
+            },
+            "severity_score": 85
+        },
+        {
+            "rule_id": "R002",
+            "rule_name": "Velocity Anomaly",
+            "description": "High number of transactions in a single day.",
+            "parameters": {
+                "max_daily_transactions": 5
+            },
+            "severity_score": 60
+        },
+        {
+            "rule_id": "R003",
+            "rule_name": "Threshold Breach",
+            "description": "Single transaction exceeding the maximum allowed limit.",
+            "parameters": {
+                "threshold_amount": 15000
+            },
+            "severity_score": 95
+        }
+    ]
+}
